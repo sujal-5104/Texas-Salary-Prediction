@@ -10,9 +10,9 @@ Five regression algorithms were evaluated using Mean Absolute Error (MAE), Root 
 | Decision Tree | $9,804.80 | $17,020.37 | 0.49 | 0.99 |
 | Extra Trees | $10,102.83 | $17,075.93 | 0.49 | 24.39 |
 
-**Best model by RMSE: Linear Regression**
+**Best Model: Linear Regression**
 
-Linear Regression achieved the lowest MAE and RMSE among the evaluated models, with an R² score of approximately 0.93. It was selected as the final model based on the evaluation results.
+Linear Regression achieved the lowest MAE and RMSE among the evaluated models, with an R² score of approximately 0.93. It was selected as the final model based on these evaluation results.
 
 ### Evaluation Methodology
 
@@ -20,53 +20,19 @@ A group-based 80:20 train-test split was used to keep identical feature combinat
 
 These metrics represent performance on the held-out test set. They do not guarantee accuracy for every employee or for future salary data.
 
-<<<<<<< HEAD
 ### Limitations
 
 - Salary predictions may have substantial errors for individual employees.
 - Performance on future years or unseen employee groups requires further validation.
 - Results depend on the available features, data quality, and salary distribution.
-=======
-# | Random Forest | $9,981.32 | $16,441.75 | 0.52 | 23.62 |
 
-# | Decision Tree | $9,804.80 | $17,020.37 | 0.49 | 0.99 |
+### Future Improvements
 
-# | Extra Trees | $10,102.83 | $17,075.93 | 0.49 | 24.39 |
+- Validate the model on newer salary data.
+- Investigate prediction errors across employee groups.
+- Improve feature engineering and model evaluation.
+- Develop an interactive salary prediction interface.
 
-# 
+### Disclaimer
 
-# \*\*Best model by RMSE: Linear Regression\*\*
-
-# 
-
-# Linear Regression achieved the lowest MAE and RMSE among the evaluated models, with an R² score of approximately 0.93. It was selected as the final model based on the evaluation results.
-
-# 
-
-# \### Evaluation Methodology
-
-# 
-
-# A group-based 80:20 train-test split was used to keep identical feature combinations from appearing in both sets. The target variable was annual salary (`annual`), and salary-related features that could cause target leakage, such as `hrly\\\_rate` and `monthly`, were excluded.
-
-# 
-
-# These metrics represent performance on the held-out test set. They do not guarantee accuracy for every employee or for future salary data.
-
-# 
-
-# \### Limitations
-
-# 
-
-# \- Salary predictions may have substantial errors for individual employees.
-
-# \- Performance on future years or unseen employee groups requires further validation.
-
-# \- Results depend on the available features, data quality, and salary distribution.
-
-# 
-
-
-
->>>>>>> 7644ba2 (Improve project README documentation)
+This project is intended for educational and machine learning practice. Predictions are estimates and should not be treated as official salary figures or employment advice.
