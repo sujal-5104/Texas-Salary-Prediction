@@ -1,20 +1,56 @@
-# Texas-Salary-Prediction
-Machine learning project to analyze Texas public-sector payroll data and predict annual salaries using regression models. Copy description
-## Model Evaluation Results
+# \## Model Evaluation Results
 
-Five regression algorithms were evaluated using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), R² score, and training time.
+# 
 
-| Model | MAE | RMSE | R² Score | Training Time (s) |
-|---|---:|---:|---:|---:|
-| Linear Regression | 0.10 | 0.23 | 1.00 | 4.43 |
-| Random Forest | 9.51 | 996.70 | 1.00 | 626.19 |
-| Decision Tree | 11.17 | 1,056.76 | 1.00 | 50.21 |
-| Ridge Regression | 20.97 | 30.97 | 1.00 | 2.27 |
-| Extra Trees | 85.31 | 1,241.86 | 1.00 | 171.01 |
+# Five regression algorithms were evaluated using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), R² score, and training time.
 
-**Best model reported:** Linear Regression
+# 
 
-Linear Regression produced the lowest reported MAE and RMSE and had the shortest training time among the tree-based models. However, the near-perfect R² scores and extremely low Linear Regression errors require further validation before these results can be considered reliable.
+# | Model | MAE | RMSE | R² Score | Training Time (s) |
 
-The metrics should be confirmed against the original annual salary values, with particular attention to target leakage, preprocessing, and the units of the target variable.
+# |---|---:|---:|---:|---:|
+
+# | Linear Regression | $3,164.20 | $6,285.51 | 0.93 | 2.86 |
+
+# | Ridge Regression | $3,223.53 | $6,443.48 | 0.93 | 1.35 |
+
+# | Random Forest | $9,981.32 | $16,441.75 | 0.52 | 23.62 |
+
+# | Decision Tree | $9,804.80 | $17,020.37 | 0.49 | 0.99 |
+
+# | Extra Trees | $10,102.83 | $17,075.93 | 0.49 | 24.39 |
+
+# 
+
+# \*\*Best model by RMSE: Linear Regression\*\*
+
+# 
+
+# Linear Regression achieved the lowest MAE and RMSE among the evaluated models, with an R² score of approximately 0.93. It was selected as the final model based on the evaluation results.
+
+# 
+
+# \### Evaluation Methodology
+
+# 
+
+# A group-based 80:20 train-test split was used to keep identical feature combinations from appearing in both sets. The target variable was annual salary (`annual`), and salary-related features that could cause target leakage, such as `hrly\_rate` and `monthly`, were excluded.
+
+# 
+
+# These metrics represent performance on the held-out test set. They do not guarantee accuracy for every employee or for future salary data.
+
+# 
+
+# \### Limitations
+
+# 
+
+# \- Salary predictions may have substantial errors for individual employees.
+
+# \- Performance on future years or unseen employee groups requires further validation.
+
+# \- Results depend on the available features, data quality, and salary distribution.
+
+# 
 
